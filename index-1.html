@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Test</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <fieldset>
+          <label for="FName"><b>First name</b></label>
+          <input type="text" name="FName" id="FName" />
+        </fieldset>
+        <fieldset>
+          <label for="LName"><b>Last name</b></label>
+          <input type="text" name="LName" id="LName" />
+        </fieldset>
+        <fieldset>
+          <label for="Email"><b>Email</b></label>
+          <input type="email" name="Email" id="Email" />
+        </fieldset>
+        <fieldset>
+          <label for="Phone"><b>Phone number</b></label>
+          <input type="tel" name="Phone" id="Phone" />
+        </fieldset>
+        <fieldset>
+          <label><b>Sex</b></label>
+          <label for="Male">
+            Male
+            <input type="radio" name="Sex" id="Male" value="Male" />
+          </label>
+          <label for="Female">
+            Female
+            <input type="radio" name="Sex" id="Female" value="Female" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label><b>Skills</b></label>
+          <label for="HTML">
+            HTML
+            <input type="checkbox" name="Skills" id="HTML" value="HTML" />
+          </label>
+          <label for="CSS">
+            CSS
+            <input type="checkbox" name="Skills" id="CSS" value="CSS" />
+          </label>
+          <label for="JavaScript">
+            JavaScript
+            <input
+              type="checkbox"
+              name="Skills"
+              id="JavaScript"
+              value="JavaScript"
+            />
+          </label>
+          <label for="AJAX">
+            AJAX
+            <input type="checkbox" name="Skills" id="AJAX" value="AJAX" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="Department"><b>Department</b></label>
+          <select name="Department" multiple>
+            <option value="FrontEnd">Front End</option>
+            <option value="Sitecore">Sitecore</option>
+            <option value="SalesForce">SalesForce</option>
+            <option value="Sharepoint">Sharepoint</option>
+          </select>
+        </fieldset>
+        <!--<fieldset>
+					<label for="Avatar"><b>Avatar</b></label>
+					<input type="file" name="Avatar" id="Avatar" />
+				</fieldset>
+				<fieldset>
+					<label for="About"><b>About</b></label>
+					<textarea name="About" id="About" rows="10"></textarea>
+				</fieldset>-->
+        <fieldset>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+      <article>
+        <ul>
+          <li>
+            <h2>Task №1</h2>
+            <p>
+              By clicking on "Submit" button an Object with "key-value" pairs
+              should be created and displayed in console log. Object should
+              contain all non-empty field names and it's values and should be
+              suitable for all XMLHTTPRequest request types ("GET", "POST",
+              "PUT", "DELETE"). new FormData() object is not acceptable.
+            </p>
+            <p>
+              <b>Example:</b><br />
+              {<br />
+              &nbsp;&nbsp;&nbsp;"FName": "Sergey",<br />
+              &nbsp;&nbsp;&nbsp;"LName": "Ivanov",<br />
+              &nbsp;&nbsp;&nbsp;"Email": "s-ivanow@gmail.com",<br />
+              &nbsp;&nbsp;&nbsp;"Phone": "+375296666666",<br />
+              &nbsp;&nbsp;&nbsp;"Sex": "Male",<br />
+              &nbsp;&nbsp;&nbsp;"Skills": ["HTML", "CSS", "JavaScript"],<br />
+              &nbsp;&nbsp;"Department": ["FrontEnd", "SalesForce"]<br />
+              }
+            </p>
+          </li>
+          <li>
+            <h2>Task №2</h2>
+            <p>
+              Create query string based on Object output from Task №1 and apply
+              it to an url
+            </p>
+            <p style="word-break: break-all">
+              <b>Example:</b><br />
+              .../index.html?FName=Sergey&LName=Ivanov&Email=s-ivanow@gmail.com&Phone=+375296666666&Sex=Male&Skills=HTML|CSS|JavaScript&Department=FrontEnd|SalesForce
+            </p>
+          </li>
+          <li>
+            <h2>Task №3 *</h2>
+            <p>
+              Check and parse current url on page load event. Fill the form with
+              data obtained from parsed query string.
+            </p>
+            <p>
+              <b>Example:</b><br />
+              Page url:
+              .../index.html?FName=Sergey&LName=Ivanov&Email=s-ivanow@gmail.com
+              Current field matches (FName, LName, Email) should be
+              automatically filled with respective values.
+            </p>
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <script type="text/javascript" src="json/data.js"></script>
+    <script type="text/javascript" src="js/app.map.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
